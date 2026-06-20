@@ -2,15 +2,15 @@
 
 # Simple Interest Calculator
 
-echo "Enter principal:"
+echo "Enter the principal:"
 read p
 
-echo "Enter rate of interest:"
+echo "Enter rate of interest per year:"
 read r
 
-echo "Enter time:"
+echo "Enter time period in years:"
 read t
 
-s=$((p*r*t/100))
+s=$(echo "scale=2; ($p * $t * $r)/100" | bc)
 
-echo "Simple Interest is $s"
+echo "Simple Interest is: $s"
